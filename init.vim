@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " ## General Utilities
 
+
 Plug 'mhinz/vim-startify'  " Start screen
 Plug 'itchyny/lightline.vim'
 Plug 'pacha/vem-tabline'
@@ -55,6 +56,7 @@ Plug 'sheerun/vim-polyglot'
 
 " ### Python
 
+Plug 'ambv/black'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 " ### Vim
@@ -65,6 +67,9 @@ Plug 'neoclide/coc-neco'
 
 " ### NerdTree
 Plug 'preservim/nerdtree'
+
+" ### Joder la vida
+Plug 'takac/vim-hardtime'
 
 call plug#end()
 
@@ -87,6 +92,8 @@ set scrolloff=3  " Display at least 3 lines around you cursor
 set diffopt+=vertical  " Always use vertical diffs
 set spelllang=en,es
 
+" ## Activar el jodedor de vida
+let g:hardtime_default_on = 1
 
 " ## Lines
 
@@ -123,7 +130,7 @@ set grepformat=%f:%l:%c:%m
 " ## Theme & Colorscheme
 
 set termguicolors  " Active true colors on terminal
-let g:ayucolor = 'mirage'  " mirage, light, dark
+let g:ayucolor = 'dark'  " mirage, light, dark
 colorscheme ayu
 
 
@@ -186,7 +193,7 @@ nnoremap <silent> <leader>o
 
 " .........................................................
 "  # Custom Commands and Autocommands
-" .........................................................
+" ........................................................
 
 " Remove trailing white spaces
 command! -range=% RemoveTrailing <line1>,<line2>s/\s\+$//e
@@ -293,15 +300,8 @@ nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 
 " ### NerdTree
-silent! nmap <C-p> :NERDTreeToggle<CR>
-silent! map <F3> :NERDTreeFind<CR>
+silent! nmap <F2> :NERDTreeToggle<CR>
 
-let g:NERDTreeMapActivateNode="<F3>"
-let g:NERDTreeMapPreview="<F4>"
-
-"
-"
-"
 "" ## Vista
 
 let g:vista_default_executive = 'coc'
@@ -402,3 +402,8 @@ let g:startify_lists = [
       \ {'type': 'sessions'},
       \ {'type': 'commands'},
       \]
+
+" vem-tabline
+let g:vem_tabline_show = 2
+nmap <leader>p <Plug>vem_prev_buffer-
+nmap <leader>n <Plug>vem_next_buffer-
