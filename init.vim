@@ -25,34 +25,6 @@ Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
 Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffer
 
-    ~/Dow/poc    master ?4  cat --paging never --plain ~/.config/nvim/init.vim         ✔  09:50:44  
-scriptencoding utf-8
-
-" .........................................................
-" # Plugins
-" .........................................................
-
-call plug#begin('~/.local/share/nvim/plugged')
-
-
-" ## General Utilities
-
-Plug 'mhinz/vim-startify'  " Start screen
-Plug 'itchyny/lightline.vim'
-Plug 'pacha/vem-tabline'
-
-" ## Editor Utilities
-
-Plug 'yggdroot/indentline'  " Show indentation lines
-Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
-Plug 'tpope/vim-commentary'  " Comment lines easily
-Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
-Plug 'alvan/vim-closetag'  " Close tags after '>'
-Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
-Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
-Plug 'tpope/vim-eunuch'  " Command line utilities
-Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffer
-
 " ## Navigation
 
 Plug 'liuchengxu/vista.vim'
