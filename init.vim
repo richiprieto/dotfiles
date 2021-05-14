@@ -97,7 +97,7 @@ let g:hardtime_default_on = 1
 
 " ## Lines
 
-set nowrap  " No wrap lines (display long lines)
+set wrap  " Wrap lines
 set number  " Display line numbers
 set relativenumber  " Show relative line numbers
 set cursorline  " Highlight current line
@@ -263,6 +263,8 @@ let g:coc_global_extensions = [
     \ 'coc-rls',
     \ 'coc-tsserver',
     \ 'coc-tag',
+    \ 'coc-vetur',
+    \ 'coc-phpls',
     \ 'coc-clangd',
     \]
 
@@ -362,6 +364,7 @@ nnoremap <silent> <leader>gs :Git<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gu :Gread<CR>
 nnoremap <silent> <leader>gc :Git commit<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
 
 
 " ## Markdown
